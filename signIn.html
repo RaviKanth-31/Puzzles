@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzles</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login_box">
+            <h1>Login</h1>
+            <div class="input_box">
+                <input id="email" type="text" required="">
+                <label for="">Email</label>
+                <ion-icon class="icon " name="mail-outline"></ion-icon>
+            </div>
+            <div class="input_box">
+                <input id="pass" type="password" required="">
+                <label for="">password</label>
+                <ion-icon class="icon" name="lock-closed-outline"></ion-icon>
+            </div>
+            <div class="login" id="signin">
+                <button>Log in </button>
+            </div>
+            <div>
+                <div class="reg">
+                    <p>Dont have an account? </p>
+                    <a href="signUp.html">Sign Up</a>
+                </div>
+            </div>
+        </div>
+     </div>
+     
+    
+        
+    
+    
+    
+    
+    
+       
+        
+        
+</body>
+<!--For login using database-->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAqwGYuTgHxvfSGUPAKziFR0xAQ_muzxyA",
+      authDomain: "puzzles-5e9b1.firebaseapp.com",
+      databaseURL: "https://puzzles-5e9b1-default-rtdb.firebaseio.com",
+      projectId: "puzzles-5e9b1",
+      storageBucket: "puzzles-5e9b1.appspot.com",
+      messagingSenderId: "500195356378",
+      appId: "1:500195356378:web:479963ce42d12d46e43fe3"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+
+    signin.addEventListener('click',(e)=>{
+   var email = document.getElementById('email').value;
+   var password = document.getElementById('pass').value;
+
+      signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        window.location.href = "puzzle.html";
+        const dt = new Date();
+         update(ref(database, 'users/' + user.uid),{
+          last_login: dt,
+        })
+
+         alert('User loged in!');
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+
+        alert(errorMessage);
+  });
+
+ });
+
+  </script>
+</html>
