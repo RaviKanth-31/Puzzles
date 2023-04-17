@@ -1,0 +1,299 @@
+.container .balloon {
+    display: inline-block;
+    width: 80px;
+    height: 105px;
+    background: #85d6ff;
+    border-radius: 80%;
+    position: relative;
+    opacity: 0.8;
+    -webkit-box-shadow: inset -10px -10px 0 rgba(0, 0, 0, 0.07);
+    box-shadow: inset -10px -10px 0 rgba(0, 0, 0, 0.07); 
+    margin: 20px 30px;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    z-index: 10;
+    -webkit-animation: balloons 2s ease-out infinite normal;
+    animation: balloons 2s linear infinite normal;
+    /*animation-timing-function: ;*/
+    -webkit-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    transform-origin: bottom center; }
+    .container .balloon:before {
+      content: "▲";
+      font-size: 20px;
+      color: #85d6ff;
+      display: block;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      bottom: -12px;
+      z-index: -100; }
+    .container .balloon:after {
+      display: inline-block;
+      top: 115px;
+      position: absolute;
+      height: 210px;
+      width: 1px;
+      margin: 0 auto;
+      content: "";
+      background: rgba(0, 0, 0, 0.2);
+}
+    .container .balloon:nth-child(2) {
+      background: #deb3ff;
+      -webkit-animation-duration: 3s;
+      animation-duration: 3s; 
+}
+   .container .balloon:nth-child(2):before {
+      color: #d8b8ff; 
+}
+    .container .balloon:nth-child(3) {
+      background: #4dff52;
+      -webkit-animation-duration: 2.5s;
+      animation-duration: 2.5s; 
+}
+  .container .balloon:nth-child(3):before {
+      color: #4dff52; }
+    .container .balloon:nth-child(4) {
+      background: #42f2ff;
+      -webkit-animation-duration: 4s;
+      animation-duration: 4s; 
+}
+  .container .balloon:nth-child(4):before {
+      color: #42f2ff; 
+}
+    .container .balloon:nth-child(5) {
+      background: #ce8355;
+      -webkit-animation-duration: 3.5s;
+      animation-duration: 3.5s; }
+    .container .balloon:nth-child(5):before {
+      color: #a96942; }
+    .container .balloon:nth-child(6) {
+      background: #ffd6e7;
+      -webkit-animation-duration: 5s;
+      animation-duration: 5s; }
+    .container .balloon:nth-child(6):before {color: #ffd6e7; }
+    .container .balloon:nth-child(7) {
+      background: #ffa352;
+      -webkit-animation-duration: 5.5s;
+      animation-duration: 5.5s; }
+    .container .balloon:nth-child(7):before {
+      color: #ffa352; }
+    .container .balloon:nth-child(8) {
+      background: #ffff47;
+      -webkit-animation-duration: 4.5s;
+      animation-duration: 4.5s; }
+    .container .balloon:nth-child(8):before {
+      color: #ffff47; }
+
+@-webkit-keyframes balloons {
+  0% {
+    top: 100%;
+    transform: rotate(10deg);
+     }
+  100% {
+    top: -100%;
+    transform: rotate(-10deg);
+    } }
+
+@keyframes balloons {
+  0% {
+    top: 100%;
+    transform: rotate(10deg);
+    }
+  
+  100% {
+    top: -150%;
+    transform: rotate(-10deg);
+    } 
+  }
+
+
+/*  confetti zone*/
+
+.confetti {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  width: 8px;
+  height: 16px;
+  background: #ffd300;
+  top: 0;
+  opacity: 0;
+}
+.confetti-piece:nth-child(1) {
+  left: 7%;
+  -webkit-transform: rotate(-40deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 182ms;
+  -webkit-animation-duration: 1116ms;
+}
+.confetti-piece:nth-child(2) {
+  left: 14%;
+  -webkit-transform: rotate(4deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 161ms;
+  -webkit-animation-duration: 1076ms;
+}
+.confetti-piece:nth-child(3) {
+  left: 21%;
+  -webkit-transform: rotate(-51deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 481ms;
+  -webkit-animation-duration: 1103ms;
+}
+.confetti-piece:nth-child(4) {
+  left: 28%;
+  -webkit-transform: rotate(61deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 334ms;
+  -webkit-animation-duration: 708ms;
+}
+.confetti-piece:nth-child(5) {
+  left: 35%;
+  -webkit-transform: rotate(-52deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 302ms;
+  -webkit-animation-duration: 776ms;
+}
+.confetti-piece:nth-child(6) {
+  left: 42%;
+  -webkit-transform: rotate(38deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 180ms;
+  -webkit-animation-duration: 1168ms;
+}
+.confetti-piece:nth-child(7) {
+  left: 49%;
+  -webkit-transform: rotate(11deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 395ms;
+  -webkit-animation-duration: 1200ms;
+}
+.confetti-piece:nth-child(8) {
+  left: 56%;
+  -webkit-transform: rotate(49deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 14ms;
+  -webkit-animation-duration: 887ms;
+}
+.confetti-piece:nth-child(9) {
+  left: 63%;
+  -webkit-transform: rotate(-72deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 149ms;
+  -webkit-animation-duration: 805ms;
+}
+.confetti-piece:nth-child(10) {
+  left: 70%;
+  -webkit-transform: rotate(10deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 351ms;
+  -webkit-animation-duration: 1059ms;
+}
+.confetti-piece:nth-child(11) {
+  left: 77%;
+  -webkit-transform: rotate(4deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 307ms;
+  -webkit-animation-duration: 1132ms;
+}
+.confetti-piece:nth-child(12) {
+  left: 84%;
+  -webkit-transform: rotate(42deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 464ms;
+  -webkit-animation-duration: 776ms;
+}
+.confetti-piece:nth-child(13) {
+  left: 91%;
+  -webkit-transform: rotate(-72deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 429ms;
+  -webkit-animation-duration: 818ms;
+}
+.confetti-piece:nth-child(14) {
+    left: 91%;
+    -webkit-transform: rotate(-72deg);
+    -webkit-animation: makeItRain 1000ms infinite ease-out;
+    -webkit-animation-delay: 429ms;
+    -webkit-animation-duration: 818ms;
+  }
+  .confetti-piece:nth-child(15) {
+    left: 91%;
+    -webkit-transform: rotate(-72deg);
+    -webkit-animation: makeItRain 1000ms infinite ease-out;
+    -webkit-animation-delay: 429ms;
+    -webkit-animation-duration: 818ms;
+  }
+  .confetti-piece:nth-child(16) {
+    left: 91%;
+    -webkit-transform: rotate(-72deg);
+    -webkit-animation: makeItRain 1000ms infinite ease-out;
+    -webkit-animation-delay: 429ms;
+    -webkit-animation-duration: 818ms;
+  }
+.confetti-piece:nth-child(odd) {
+  background: #ce12b8;
+}
+.confetti-piece:nth-child(even) {
+  z-index: 1;
+}
+.confetti-piece:nth-child(4n) {
+  width: 5px;
+  height: 12px;
+  -webkit-animation-duration: 2000ms;
+}
+.confetti-piece:nth-child(3n) {
+  width: 3px;
+  height: 10px;
+  -webkit-animation-duration: 2500ms;
+  -webkit-animation-delay: 1000ms;
+}
+.confetti-piece:nth-child(4n-7) {background: red;}
+
+@-webkit-keyframes makeItRain {
+  from {opacity: 0;}
+  50% {opacity: 1;}
+  to {-webkit-transform: translateY(100%);}
+}
+
+
+/* Text CSS code */
+
+.containerText{
+  text-align: center;
+  font-family: 'Satisfy', cursive;
+  font-size: 30px;
+  position: fixed;
+  left:40%;
+}
+.leftText, .rightText{
+  top: 150px;
+  position: relative;
+}
+.leftText{
+  margin-top:10px;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    color: white;
+  }
+#but{
+    background-color: white;
+    border: 0;
+}

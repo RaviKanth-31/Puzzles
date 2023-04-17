@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="puzzle.css">
+    <link rel="stylesheet" href="animation.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <title>Puzzle</title>
+</head>
+<body>
+    <div class="confetti">
+    <div id="quiz_box">
+        <h2 id="puzzno" class="child"></h2>
+        <div id="js_timer">
+            <h3 id="timetaken">0:0:0</h3>
+        </div>
+        <p id="puzz" class="child"></p>
+        
+            <input id="ans" type="text" required="">
+            <div class="submit">
+                <button title="Clue" id="Clue">Clue</button>
+                <button id="sub_btn" title="Submit">Submit</button>
+            </div>
+    </div>
+</div>
+<section class="page-navigation">
+    <a id="btn-prev">
+        <h3>❮ Previous</h3>
+    </a>
+    <a id="btn-next" style="visibility: hidden;">
+        <h3>Next ❯</h3>
+    </a>     
+</section>
+</body>
+
+<script src="db.js" type="module"></script>
+<script src="puzzle2.js" type="module"></script>
+</html>

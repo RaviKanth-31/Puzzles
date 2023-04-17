@@ -1,0 +1,128 @@
+h1{
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Waiting for the Sunrise', cursive;
+    
+}
+#container{
+    display: block;
+    height: 500px;
+    margin: 5rem auto;
+    width:60%;
+}
+#quiz_box{
+    display: block;
+    height: 300px;
+    margin: auto;
+    width:90%;
+	background-color:transparent;
+    padding:50px;
+}
+.input_box{
+	width: 90%;
+	margin: auto;
+	height: 50px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.input_box input{
+	width: 20%;
+    height:40px;
+	box-sizing: border-box;
+	outline: none;
+	border: dotted red;
+    padding: 0px 20px;
+	background-color:transparent;
+	color: #000000;
+	font-size: 18px;
+}
+.input_box label{
+	position: relative;
+    margin: 0 auto;
+	top: 40%;
+	left: 10px;
+	transform:translateY(-30%);
+	font-size:18px;
+	font-weight:500;
+	color: #000000;
+	transition: .3s;
+}
+
+.submit{
+	color: rgb(0, 0, 0);
+	display: flex;
+	justify-content: center;
+}
+
+.submit button{
+	width: 200px;
+	height:40px;
+	margin-top:20px;
+    margin-left: 100px;
+	border-radius: 20px;
+	font-size:18px;
+	font-weight:bold;
+	background-color: #ffffff;
+	border: 1px solid #000000;
+	outline:none;
+	transition: .3s;
+}
+.submit button:hover{
+	cursor: pointer;
+	background-color:black;
+	color:white;
+	border: 1px solid #000000;
+ }
+ #js_timer{
+    margin: 0 auto;
+    align-content: center;
+ }
+ #btn-prev{
+    text-shadow: 0 0 20px 0;
+    position: absolute;
+    padding: 10px 40px;
+}
+#btn-next{
+    text-shadow: 0 0 20px 0;
+    position: absolute;
+    right: 0px;
+    padding: 10px 40px;
+}
+/* #puzzno{
+    position: relative;
+}
+#puzz{
+    position: relative;
+    margin: 3rem 0 3rem 0;
+}
+#ans{
+    position: absolute;
+    margin-top: 30%;
+    margin-left: 30%;
+} */
+#clue{
+	color: rgb(0, 0, 0);
+	display: flex;
+	justify-content: center;
+}
+
+#clue button{
+	width: 200px;
+	height:40px;
+	margin-top:20px;
+    margin-right: auto;
+	border-radius: 20px;
+	font-size:18px;
+	font-weight:bold;
+	background-color: #ffffff;
+	border: 1px solid #000000;
+	outline:none;
+	transition: .3s;
+}
+#clue button:hover{
+	cursor: pointer;
+	background-color:black;
+	color:white;
+	border: 1px solid #000000;
+ }
